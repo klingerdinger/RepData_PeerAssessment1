@@ -18,7 +18,7 @@ hist(sumSteps,breaks=20,col="blue",
      main="Histogram of number of steps per day")
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
+![plot of chunk SumSteps_noNAs](figure/SumSteps_noNAs-1.png)
 
 * The mean number of steps per day is 1.0766189 &times; 10<sup>4</sup>.  
 * The median number of steps per day is 10765.
@@ -34,7 +34,7 @@ plot(as.numeric(names(meanSteps)),meanSteps,type = "l",
      main="Average number of steps taken in 5-minute intervals")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+![plot of chunk DailyPattern_noNAs](figure/DailyPattern_noNAs-1.png)
 
 * The 104th interval (time = 835) has the highest average number of steps (206.1698113).
 
@@ -54,7 +54,7 @@ hist(sumSteps2,breaks=20,col="blue",
      main="Histogram of number of steps per day")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk SumSteps_withNAs](figure/SumSteps_withNAs-1.png)
 
 After replacing missing values of "steps" with the mean value of the respective interval:  
 
@@ -85,5 +85,5 @@ lattice::xyplot(x~interval|weekEnd,
                 index.cond=list(2:1))
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+![plot of chunk DailyPattern_withNas_weekDay](figure/DailyPattern_withNas_weekDay-1.png)
 
